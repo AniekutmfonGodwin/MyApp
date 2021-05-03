@@ -17,6 +17,9 @@ def Home(request):
 def Detail(request,id):
     return render(request,template_name='detail.html')
 
- 
+
+def Post(request,id):
+    return render(request,template_name='post.html')
+
 
    

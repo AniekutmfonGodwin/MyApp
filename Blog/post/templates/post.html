@@ -8,6 +8,8 @@
 </head>
 <body>
     <h3>welcome {{name}}</h3>
+    <a href="{% url 'post:post_url' 55 %}">Post Url</a>
+    
     
     <form action="/" method="post">
         {% csrf_token %}
