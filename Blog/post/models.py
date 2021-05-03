@@ -25,6 +25,14 @@ class Profile(models.Model):
         return self.user_type
 
 
+    def get_absolute_url(self):
+        return reverse("model_detail", )
+
+
+     
+    
+
+
 
 
 

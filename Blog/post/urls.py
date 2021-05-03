@@ -17,8 +17,10 @@ Including another URLconf
 from django.urls import path
 from post.views import Home,Detail
 
+app_name = 'post'
+
 urlpatterns = [
-    path('',Home),
+    path('',Home,name="list-view"),
     # /anies/44/
-    path('<int:id>/',Detail),
+    path('hhsjsjshshshsgsffdd/<int:id>/',Detail,name="detail-view"),
 ]
