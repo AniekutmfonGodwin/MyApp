@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import path
 from post.views import Home,Detail
 
-app_name = 'post'
+# app_name = 'post'
 
 urlpatterns = [
     path('',Home,name="list-view"),

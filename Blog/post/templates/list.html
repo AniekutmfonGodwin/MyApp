@@ -9,7 +9,7 @@
 </head>
 <body>
     <h3>this is a get method  </h3>
-    <a href="{% url 'post:detail-view' 22 %}"> detial view url</a>
+    <a href="{% url 'detail-view' id=22  %}"> detial view url</a>
     
     {% for post in posts %}
             <div>
