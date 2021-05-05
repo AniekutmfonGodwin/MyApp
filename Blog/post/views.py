@@ -23,6 +23,9 @@ def Detail(request,id):
     raise Http404()
     return render(request,template_name='detail.html')
 
- 
+
+def Post(request,id):
+    return render(request,template_name='post.html')
+
 
    

@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from post.views import Home,Detail
+from post.views import Home,Detail,Post
 
 # app_name = 'post'
 
@@ -23,4 +23,5 @@ urlpatterns = [
     path('',Home,name="list-view"),
     # /anies/44/
     path('hhsjsjshshshsgsffdd/<int:id>/',Detail,name="detail-view"),
+    path( 'post/<int:id>/',Post, name='post_url')
 ]
