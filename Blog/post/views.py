@@ -10,9 +10,11 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 def Home(request):
-    print("user is logged in",request.user.username)
-    form = "<input name='username'/>"
-    return render(request,template_name='index.html',context={"form":form})
+    if request.user.is_authenticated and request.user.is_staff:
+        print("user is logged in",request.user.username)
+        form = "<input name='username'/>"
+        return render(request,template_name='index.html',context={"form":form})
+    return HttpResponse("not permitted",status=400)
 
 def Featured(request):
     return render(request,template_name='feature.html')
